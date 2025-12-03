@@ -1,0 +1,28 @@
+# Flask web framework
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Google Gemini AI
+google-generativeai==0.3.2
+
+# ElevenLabs TTS
+elevenlabs==0.2.27
+requests==2.31.0
+
+# Twilio for WhatsApp
+twilio==8.11.0
+
+# Audio processing
+SpeechRecognition==3.10.1
+pydub==0.25.1
+PyAudio==0.2.14
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Language detection (optional)
+langdetect==1.0.9
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
