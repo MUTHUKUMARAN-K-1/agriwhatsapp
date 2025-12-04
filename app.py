@@ -104,12 +104,12 @@ def webhook():
             logger.info("Converting to speech...")
             audio_data = tts.text_to_speech(ai_response, language=detected_language)
             
-            # Save audio file locally
-            audio_path = audio_processor.save_audio_local(audio_data, from_number)
+            # Save audio file and get public URL
+            audio_url = audio_processor.save_audio(audio_data, from_number)
             
-            if audio_path:
-                # Send voice message using local file
-                whatsapp.send_voice_message_from_file(from_number, audio_path)
+            if audio_url:
+                # Send voice message using public URL
+                whatsapp.send_voice_message(from_number, audio_url)
                 logger.info(f"Voice response sent to {from_number}")
             
         except Exception as e:
